@@ -1,0 +1,40 @@
+/* DESIGN VARIABLES */
+:root {
+    --bg-navy: #020A3C;
+    --bg-navy-dark: #010626;
+    --bg-blue-dark: #4344E4;
+    --bg-yellow: #FFC221;
+    --bg-cream: #FDF7EA;
+    --bg-cream-dark: #FCEFD2;
+    --bg-alice: #F2F7FB;
+    --font-dm: 'DM Sans', sans-serif;
+}
+
+/* BASE RULES */
+body {
+    font-family: var(--font-dm);
+    color: #333333;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* CUSTOM UTILITY CLASSES FOR REUSABILITY */
+.text-navy {
+    color: var(--bg-navy) !important;
+}
+
+.bg-cream {
+    background-color: var(--bg-cream) !important;
+}
+
+.bg-alice-blue {
+    background-color: var(--bg-alice) !important;
+}
+
+.bg-blue-dark {
+    background-color: var(--bg-blue-dark) !important;
+}
+
+.bg-navy-dark {
+    background-color: var(--bg-navy-dark) !important;
+}
