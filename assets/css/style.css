@@ -9,17 +9,19 @@
     --bg-light-blue: #f3f7fa;
     --bg-yellow-light: #fcfcf4;
     --text-navy: #020c27;
+    --font-dm: 'DM Sans', sans-serif;
 }
 
 /* --- GENERAL RESET & TYPOGRAPHY --- */
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-dm);
     color: var(--text-navy);
     background-color: #fff;
 }
 
 /* --- THEME COLORS --- */
 .text-navy { color: var(--bg-navy) !important; }
+.bg-navy { background-color: var(--bg-navy) !important; }
 .bg-yellow-light { background-color: var(--bg-yellow-light) !important; }
 .bg-light-blue { background-color: var(--bg-light-blue) !important; }
 
@@ -57,60 +59,56 @@ body {
     color: #fff;
 }
 
-.btn-purple {
-    background-color: #4b36c4;
-    color: #fff;
-    border: none;
-    transition: all 0.2s ease-in-out;
-}
-.btn-purple:hover {
-    background-color: #3b28a8;
-    color: #fff;
-}
-
-/* --- HERO LAYERED EFFECT --- */
+/* --- HERO GRAPHICS (1ST IMAGE) --- */
 .hero-image-container {
     position: relative;
     max-width: 440px;
+    display: inline-block;
 }
 .hero-orange-base {
     width: 100%;
     display: block;
-    border-radius: 40px;
+    height: auto;
 }
 .hero-phone-overlay {
     position: absolute;
-    bottom: -30px;
-    right: -20px;
-    width: 60%;
+    top: 5%;
+    left: 10%;
+    width: 38%;
+    height: auto;
+    z-index: 10;
 }
 
-/* --- CARD CUSTOM STYLING --- */
-.bg-yellow-card {
-    background-color: #fff9ea;
-}
-.bg-navy-ribbon {
-    background-color: var(--bg-navy);
-}
-
-/* --- FEATURED IN LOGO STYLING --- */
-
-/* Increases size and applies color to the label */
+/* --- FEATURED IN (Logo Section) --- */
 .featured-text {
     color: var(--bg-navy);
     font-size: 1.25rem;
     font-weight: 700;
 }
 
-/* Forces logos to a beautiful Dark Navy Blue theme */
 .brand-logo {
-    filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(2250%) hue-rotate(204deg) brightness(85%) contrast(107%);
-    transition: all 0.3s ease-in-out;
     display: block;
+    width: 100%;
+    height: auto;
+    
+    /* Transforms original dark logos exactly into Certo's Navy color */
+    filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(2250%) hue-rotate(204deg) brightness(85%) contrast(107%);
+    opacity: 0.95;
+    transition: transform 0.3s ease;
 }
 
-/* Hover over individual logos to return to their original colors */
 .logo-wrapper:hover .brand-logo {
-    filter: none;
-    transform: scale(1.05); /* Slight grow effect */
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/* --- MISC THEME CARDS --- */
+.bg-yellow-card { background-color: #fdf7ea !important; }
+.bg-navy-ribbon { background-color: var(--bg-navy) !important; }
+.btn-purple { background-color: #4b36c4; color: #fff; }
+.btn-purple:hover { background-color: #3b28a8; color: #fff; }
+
+/* Footer Newsletter Card matches #ffc22b branding background */
+.footer-newsletter {
+    background-color: var(--bg-yellow) !important;
 }
