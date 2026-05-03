@@ -1,244 +1,116 @@
-/* DESIGN VARIABLES */
+/* ==========================================================================
+   CERTO CUSTOM STYLESHEET
+   ========================================================================== */
+
+/* --- ROOT VARIABLES --- */
 :root {
-    --bg-navy: #020A3C;
-    --bg-navy-dark: #010626;
-    --bg-blue-dark: #4344E4;
-    --bg-yellow: #FFC221;
-    --bg-cream: #FDF7EA;
-    --bg-cream-dark: #FCEFD2;
-    --bg-alice: #F2F7FB;
-    --font-dm: 'DM Sans', sans-serif;
+    --bg-navy: #020c27;
+    --bg-yellow: #ffc22b;
+    --bg-light-blue: #f3f7fa;
+    --bg-yellow-light: #fcfcf4;
+    --text-navy: #020c27;
 }
 
-/* BASE RULES */
+/* --- GENERAL RESET & TYPOGRAPHY --- */
 body {
-    font-family: var(--font-dm);
-    color: #333333;
-    background-color: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text-navy);
+    background-color: #fff;
 }
 
-/* CUSTOM UTILITY CLASSES FOR REUSABILITY */
-.text-navy {
-    color: var(--bg-navy) !important;
+/* --- THEME COLORS --- */
+.text-navy { color: var(--bg-navy) !important; }
+.bg-yellow-light { background-color: var(--bg-yellow-light) !important; }
+.bg-light-blue { background-color: var(--bg-light-blue) !important; }
+
+/* --- CUSTOM BUTTONS --- */
+.btn-navy {
+    background-color: var(--bg-navy);
+    color: #fff;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.btn-navy:hover {
+    background-color: #0b1a44;
+    color: #fff;
 }
 
-.bg-cream {
-    background-color: var(--bg-cream) !important;
-}
-
-.bg-yellow-light {
-    background-color: #FDF9EC !important; /* Soft yellow for Testimonials section */
-}
-
-.bg-yellow-card {
-    background-color: var(--bg-yellow) !important;
-}
-
-.bg-alice-blue {
-    background-color: var(--bg-alice) !important;
-}
-
-.bg-light-blue {
-    background-color: var(--bg-alice) !important;
-}
-
-.bg-blue-dark {
-    background-color: var(--bg-blue-dark) !important;
-}
-
-.bg-navy-dark {
-    background-color: var(--bg-navy-dark) !important;
-}
-
-.bg-navy {
-    background-color: var(--bg-navy) !important;
-}
-
-.bg-navy-ribbon {
-    background: linear-gradient(135deg, #4344E4, #2A2BC2) !important;
-}
-
-/* CONTAINER MAX WIDTH */
-.max-width-card {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-/* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-}
-
-.lead {
-    font-size: 1.15rem;
-    line-height: 1.65;
-}
-
-/* BUTTON CUSTOMIZATION */
 .btn-yellow {
     background-color: var(--bg-yellow);
     color: var(--bg-navy);
-    border: 1px solid var(--bg-yellow);
-    transition: all 0.25s ease-in-out;
+    border: none;
+    transition: all 0.2s ease-in-out;
 }
-
 .btn-yellow:hover {
-    background-color: #e5ad19;
-    border-color: #e5ad19;
+    background-color: #e5ad21;
     color: var(--bg-navy);
-    transform: translateY(-2px);
-}
-
-.btn-navy {
-    background-color: var(--bg-navy);
-    border: 1px solid var(--bg-navy);
-    transition: all 0.25s ease-in-out;
-}
-
-.btn-navy:hover {
-    background-color: #01041a;
-    border-color: #01041a;
-    transform: translateY(-2px);
 }
 
 .btn-outline-navy {
     background-color: transparent;
     color: var(--bg-navy);
     border: 2px solid var(--bg-navy);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
-
 .btn-outline-navy:hover {
     background-color: var(--bg-navy);
-    color: #ffffff !important;
+    color: #fff;
 }
 
 .btn-purple {
-    background-color: #4344E4;
-    border: 1px solid #4344E4;
-    transition: all 0.25s ease-in-out;
+    background-color: #4b36c4;
+    color: #fff;
+    border: none;
+    transition: all 0.2s ease-in-out;
 }
-
 .btn-purple:hover {
-    background-color: #3132bf;
-    border-color: #3132bf;
-    transform: translateY(-2px);
+    background-color: #3b28a8;
+    color: #fff;
 }
 
-/* NAVBAR */
-.navbar {
-    transition: all 0.3s ease;
-}
-
-.navbar .nav-link {
-    font-size: 1.05rem;
-    transition: color 0.2s ease;
-}
-
-.navbar .nav-link:hover {
-    color: var(--bg-blue-dark) !important;
-}
-
-/* SECTION SPECIFIC */
-.hero-section {
-    background-color: #ffffff;
-}
-
-/* FEATURED IN LOGO STYLING */
-.brand-logo {
-    opacity: 0.6;
-    filter: grayscale(100%);
-    transition: all 0.3s ease-in-out;
-}
-
-.brand-logo:hover {
-    opacity: 1;
-    filter: none;
-    transform: scale(1.05);
-}
-
-/* FOOTER */
-footer a {
-    transition: opacity 0.2s ease;
-}
-
-footer a:hover {
-    opacity: 1 !important;
-}
-
-/* ==========================================
-   Hero Image Stacking Layout
-============================================= */
-
-/* Main visual box - Sized perfectly and bounded with blue border */
+/* --- HERO LAYERED EFFECT --- */
 .hero-image-container {
     position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: 440px; /* Reduced to make the image box smaller */
-    margin: 0 auto;
-    border: 12px solid #4344E4; /* Thick blue matching style line border */
-    border-radius: 20px; /* Modern curved edges */
-    overflow: hidden; /* Ensures base image doesn't overflow the rounded corners */
+    max-width: 440px;
 }
-
-/* Layer 1: Orange background graphic base */
 .hero-orange-base {
-    position: relative;
-    display: block;
     width: 100%;
-    height: auto;
-    z-index: 1; 
+    display: block;
+    border-radius: 40px;
 }
-
-/* Layer 2: Phone screen mockup overlayed directly on top */
 .hero-phone-overlay {
     position: absolute;
-    top: 10%;        
-    left: 11%;       
-    width: 38%;      
-    height: auto;    
-    z-index: 10;     
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.22)); 
+    bottom: -30px;
+    right: -20px;
+    width: 60%;
 }
 
-/* RESPONSIVENESS RULES */
-@media (max-width: 1199px) {
-    .display-4 {
-        font-size: 3rem;
-    }
+/* --- CARD CUSTOM STYLING --- */
+.bg-yellow-card {
+    background-color: #fff9ea;
+}
+.bg-navy-ribbon {
+    background-color: var(--bg-navy);
 }
 
-@media (max-width: 991px) {
-    .hero-image-container {
-        margin-top: 1.5rem;
-    }
+/* --- FEATURED IN LOGO STYLING --- */
+
+/* Increases size and applies color to the label */
+.featured-text {
+    color: var(--bg-navy);
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
-@media (max-width: 768px) {
-    .display-4 {
-        font-size: 2.4rem;
-    }
-    .display-5 {
-        font-size: 2rem;
-    }
-    .display-6 {
-        font-size: 1.75rem;
-    }
-    main {
-        margin-top: 72px !important;
-    }
-    .p-5 {
-        padding: 2rem !important;
-    }
+/* Forces logos to a beautiful Dark Navy Blue theme */
+.brand-logo {
+    filter: brightness(0) saturate(100%) invert(8%) sepia(35%) saturate(2250%) hue-rotate(204deg) brightness(85%) contrast(107%);
+    transition: all 0.3s ease-in-out;
+    display: block;
 }
 
-@media (max-width: 360px) {
-    .display-4 {
-        font-size: 2rem;
-    }
-    .p-5 {
-        padding: 1.5rem !important;
-    }
+/* Hover over individual logos to return to their original colors */
+.logo-wrapper:hover .brand-logo {
+    filter: none;
+    transform: scale(1.05); /* Slight grow effect */
 }
