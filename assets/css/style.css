@@ -27,7 +27,19 @@ body {
     background-color: var(--bg-cream) !important;
 }
 
+.bg-yellow-light {
+    background-color: #FDF9EC !important; /* Soft yellow for Testimonials section */
+}
+
+.bg-yellow-card {
+    background-color: var(--bg-yellow) !important;
+}
+
 .bg-alice-blue {
+    background-color: var(--bg-alice) !important;
+}
+
+.bg-light-blue {
     background-color: var(--bg-alice) !important;
 }
 
@@ -37,4 +49,194 @@ body {
 
 .bg-navy-dark {
     background-color: var(--bg-navy-dark) !important;
+}
+
+.bg-navy {
+    background-color: var(--bg-navy) !important;
+}
+
+.bg-navy-ribbon {
+    background: linear-gradient(135deg, #4344E4, #2A2BC2) !important;
+}
+
+/* CONTAINER MAX WIDTH */
+.max-width-card {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+/* BUTTON CUSTOMIZATION */
+.btn-yellow {
+    background-color: var(--bg-yellow);
+    color: var(--bg-navy);
+    border: 1px solid var(--bg-yellow);
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-yellow:hover {
+    background-color: #e5ad19;
+    border-color: #e5ad19;
+    color: var(--bg-navy);
+    transform: translateY(-2px);
+}
+
+.btn-navy {
+    background-color: var(--bg-navy);
+    border: 1px solid var(--bg-navy);
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-navy:hover {
+    background-color: #01041a;
+    border-color: #01041a;
+    transform: translateY(-2px);
+}
+
+.btn-outline-navy {
+    background-color: transparent;
+    color: var(--bg-navy);
+    border: 2px solid var(--bg-navy);
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-outline-navy:hover {
+    background-color: var(--bg-navy);
+    color: #ffffff !important;
+}
+
+.btn-purple {
+    background-color: #4344E4;
+    border: 1px solid #4344E4;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-purple:hover {
+    background-color: #3132bf;
+    border-color: #3132bf;
+    transform: translateY(-2px);
+}
+
+/* NAVBAR */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--bg-blue-dark) !important;
+}
+
+/* SECTION SPECIFIC */
+.hero-section {
+    background-color: #ffffff;
+}
+
+.brand-logo {
+    opacity: 0.8;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+    filter: none;
+}
+
+/* FOOTER */
+footer a {
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 1 !important;
+}
+
+/* ==========================================
+   Hero Image Stacking Layout
+============================================= */
+
+/* Main visual box - Sized perfectly and bounded with blue border */
+.hero-image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 440px; /* Reduced to make the image box smaller */
+    margin: 0 auto;
+    border: 12px solid #4344E4; /* Thick blue matching style line border */
+    border-radius: 20px; /* Modern curved edges */
+    overflow: hidden; /* Ensures base image doesn't overflow the rounded corners */
+}
+
+/* Layer 1: Orange background graphic base */
+.hero-orange-base {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1; 
+}
+
+/* Layer 2: Phone screen mockup overlayed directly on top */
+.hero-phone-overlay {
+    position: absolute;
+    top: 10%;        
+    left: 11%;       
+    width: 38%;      
+    height: auto;    
+    z-index: 10;     
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.22)); 
+}
+
+/* RESPONSIVENESS RULES */
+@media (max-width: 1199px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-image-container {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.4rem;
+    }
+    .display-5 {
+        font-size: 2rem;
+    }
+    .display-6 {
+        font-size: 1.75rem;
+    }
+    main {
+        margin-top: 72px !important;
+    }
+    .p-5 {
+        padding: 2rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    .p-5 {
+        padding: 1.5rem !important;
+    }
 }
