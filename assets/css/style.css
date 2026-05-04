@@ -124,36 +124,39 @@ body {
 
 
 /* ==========================================================================
-   Hero Section App Layout - Fixed Sizing to Stay Inside
+   Hero Section App Layout - FIXED: Added blue border, smaller phone, shifted left
    ========================================================================== */
 
 .hero-image-container {
     position: relative;
     width: 100%;
-    max-width: 480px; /* Expands width constraints slightly for a taller layout */
-    height: 540px; /* Taller box prevents flatness */
+    max-width: 480px; 
+    height: 540px; 
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 15px solid #4a00e0; /* Adds the thick blue border just like pic 2 */
+    border-radius: 39px; /* Matches pic 2's specific curvature */
+    overflow: hidden; /* Keeps the phone smaller and contained inside the borders */
 }
 
 .hero-orange-base {
     width: 100%;
     height: 100%;
-    object-fit: fill; /* Allows the background to scale vertically without flattening */
-    border-radius: 24px;
+    object-fit: fill; 
+    /* border-radius is removed as it's now handled by the parent container */
     display: block;
 }
 
 .hero-phone-overlay {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Keeps it exactly centered horizontally and vertically */
-    width: 86%; /* Properly fills width without overflowing edges */
-    height: 92%; /* Taller height prevents it from getting flattened */
-    object-fit: contain; /* Prevents visual distortion or squishing of the phone mockup */
+    left: 10%; /* Place it on the left side, shifting it away from center */
+    transform: translateY(-50%); /* Only centers it vertically now */
+    width: 60%; /* Make phone size smaller (was 86%) to make background more visible */
+    height: auto; /* Smaller height prevents flattening */
+    object-fit: contain; 
     z-index: 2;
     display: block;
 }
