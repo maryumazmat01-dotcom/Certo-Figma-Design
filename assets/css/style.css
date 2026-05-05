@@ -176,7 +176,7 @@ body {
 .expertise-image-wrapper::after {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: -20px;
     bottom: -20px;
     left: 20px;
