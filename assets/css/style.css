@@ -152,7 +152,7 @@ body {
 .hero-phone-overlay {
     position: absolute;
     top: 50%;
-    left: 10%; /* Place it on the left side, shifting it away from center */
+    left: 30%; /* Place it on the left side, shifting it away from center */
     transform: translateY(-50%); /* Only centers it vertically now */
     width: 60%; /* Make phone size smaller (was 86%) to make background more visible */
     height: auto; /* Smaller height prevents flattening */
