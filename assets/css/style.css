@@ -129,7 +129,7 @@ body {
 
 .hero-image-container {
     position: relative;
-    width: 200%;
+    width: 100%;
     max-width: 480px; 
     height: 540px; 
     margin: 0 auto;
