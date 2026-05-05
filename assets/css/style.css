@@ -170,7 +170,7 @@ body {
     position: relative;
     display: inline-block;
     z-index: 1;
-    max-width: 480px;
+    max-width: 490px;
 }
 
 .expertise-image-wrapper::after {
