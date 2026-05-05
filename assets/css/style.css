@@ -154,7 +154,7 @@ body {
     top: 50%;
     left: 5%; /* Place it on the left side, shifting it away from center */
     transform: translateY(-50%); /* Only centers it vertically now */
-    width: 60%; /* Make phone size smaller (was 86%) to make background more visible */
+    width: 40%; /* Make phone size smaller (was 86%) to make background more visible */
     height: auto; /* Smaller height prevents flattening */
     object-fit: contain; 
     z-index: 2;
