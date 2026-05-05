@@ -151,7 +151,7 @@ body {
 
 .hero-phone-overlay {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 10%; /* Place it on the left side, shifting it away from center */
     transform: translateY(-50%); /* Only centers it vertically now */
     width: 60%; /* Make phone size smaller (was 86%) to make background more visible */
@@ -176,7 +176,7 @@ body {
 .expertise-image-wrapper::after {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 20px;
     right: -20px;
     bottom: -20px;
     left: 20px;
